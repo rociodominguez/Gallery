@@ -7,7 +7,7 @@
 }
 
 @font-face {
-  font-family: "for-h1";
+  font-family: "text";
   src: url(/assets/fonts/Skeina.otf);
 }
 
@@ -27,7 +27,7 @@ body {
 }
 
 h1 {
-  font-family: "for-h1";
+  font-family: "text";
   font-size: 50px;
   margin: 2rem 0 1rem 0;
   display: flex;
@@ -116,7 +116,7 @@ button:active {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 130px;
 }
 
 .container img {
@@ -163,12 +163,6 @@ button:active {
   color: var(--placeholder);
 }
 
-.footer-content {
-  padding: 10px 0 10px 0;
-  color: var(--bg-color);
-  background-color: var(--text-color);
-}
-
 p {
   display: flex;
   justify-content: center;
@@ -177,4 +171,22 @@ p {
 a {
   color: rgb(246, 218, 196);
   margin-left: 5px;
+}
+
+footer {
+  position: fixed; 
+  bottom: 0;
+  width: 100%;
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.alert-message {
+  font-family: "text";
+  display: flex;
+  justify-content: center;
+  font-size: 170%;
+  margin-top: 2rem;
 }

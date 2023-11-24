@@ -46,15 +46,21 @@ const exploreImages = async () => {
 const showingImages = (images) => {
   imageContainer.innerHTML = '';
 
-  images.forEach(image => {
-    const imgElement = document.createElement('img');
-    imgElement.src = image.urls.regular;
-    imageContainer.appendChild(imgElement);
-  });
+  if (images.length === 0) {
+    const alertMessage = document.createElement('h3');
+    alertMessage.textContent = "Sorry :( No images found";
+    alertMessage.classList.add('alert-message');
+    imageContainer.appendChild(alertMessage);
+  } else {
+    images.forEach(image => {
+      const imgElement = document.createElement('img');
+      imgElement.src = image.urls.regular;
+      imageContainer.appendChild(imgElement);
+    });
+  }
 };
 
 buttonExplore.addEventListener('click', exploreImages);
-
 
 window.addEventListener('DOMContentLoaded', () => {
   inputValue.value = 'flowers';
